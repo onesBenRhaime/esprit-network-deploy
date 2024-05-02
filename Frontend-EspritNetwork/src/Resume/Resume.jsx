@@ -21,14 +21,15 @@ export function Resume() {
 		setIsPdfResumeVisible(!isPdfResumeVisible);
 	};
 
-
 	///////////////////////////////////////////
 	const [fautes, setFautes] = useState([]);
 	const [selectedMot, setSelectedMot] = useState(null);
 
 	// Fonction pour afficher ou masquer les suggestions du mot sélectionné
 	const handleMotClick = (motFaux) => {
-		setSelectedMot((prevSelectedMot) => (prevSelectedMot === motFaux ? null : motFaux));
+		setSelectedMot((prevSelectedMot) =>
+			prevSelectedMot === motFaux ? null : motFaux
+		);
 	};
 
 	///////////////////////////////////////////
@@ -88,27 +89,34 @@ export function Resume() {
 				cvData.contact.adresse,
 				cvData.contact.lienGit,
 				cvData.contact.lienLinkedIn,
-				...cvData.parcoursProfessionnels.map(parcourspro =>
-					[parcourspro.poste, parcourspro.entreprise, parcourspro.dateDebut, parcourspro.dateFin, parcourspro.description]
-				),
-				...cvData.parcoursAcademiques.map(parcoursaca =>
-					[parcoursaca.diplome, parcoursaca.etablissement, parcoursaca.dateDebut, parcoursaca.dateFin]
-				),
+				...cvData.parcoursProfessionnels.map((parcourspro) => [
+					parcourspro.poste,
+					parcourspro.entreprise,
+					parcourspro.dateDebut,
+					parcourspro.dateFin,
+					parcourspro.description,
+				]),
+				...cvData.parcoursAcademiques.map((parcoursaca) => [
+					parcoursaca.diplome,
+					parcoursaca.etablissement,
+					parcoursaca.dateDebut,
+					parcoursaca.dateFin,
+				]),
 				...cvData.competences,
-				...cvData.langues
+				...cvData.langues,
 			];
 
-			const texteAVerifier = sections.flat().filter(Boolean).join(' ');
+			const texteAVerifier = sections.flat().filter(Boolean).join(" ");
 
-			         detecterFautes(texteAVerifier)
-				.then(fautes => {
-					console.log('Fautes détectées :', fautes);
+			detecterFautes(texteAVerifier)
+				.then((fautes) => {
+					console.log("Fautes détectées :", fautes);
 					setFautes(fautes);
-					console.log('api correction',fautes);
+					console.log("api correction", fautes);
 				})
 
-				.catch(error => {
-					console.error('Erreur lors de la détection des fautes :', error);
+				.catch((error) => {
+					console.error("Erreur lors de la détection des fautes :", error);
 				});
 		}
 	}, [cvData]);
@@ -123,22 +131,22 @@ export function Resume() {
 	if (!cvData) {
 		return <div>Chargement en cours...</div>;
 	}
-/////////////////////////////////////// Votre fonction pour détecter les fautes
-async function detecterFautes(texte) {
-	try {
-		const response = await axios.post('http://localhost:3000/cv/detecterfautes', { texte });
-		return response.data;
-	} catch (error) {
-		console.error('Erreur lors de la détection des fautes :', error);
-		throw error;
+	/////////////////////////////////////// Votre fonction pour détecter les fautes
+	async function detecterFautes(texte) {
+		try {
+			const response = await axios.post(
+				"http://localhost:3000/cv/detecterfautes",
+				{ texte }
+			);
+			return response.data;
+		} catch (error) {
+			console.error("Erreur lors de la détection des fautes :", error);
+			throw error;
+		}
 	}
-}
-/////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////
 
-
-//////////////////////////////////////////////////////////////////
-
-	
+	//////////////////////////////////////////////////////////////////
 
 	return (
 		<>
@@ -146,8 +154,9 @@ async function detecterFautes(texte) {
 			<div className="container cv col-lg-12">
 				<div className="row col-lg-12 col-md-5 col-sm-5 col-10">
 					<nav
-						className={`nav-menu nav-menu navbar col-lg-3 ${isOpen ? "active" : ""
-							}`}
+						className={`nav-menu nav-menu navbar col-lg-3 ${
+							isOpen ? "active" : ""
+						}`}
 					>
 						<button
 							className="navbar-toggler"
@@ -277,32 +286,32 @@ async function detecterFautes(texte) {
 																		<br />
 																		<strong>Période :</strong>{" "}
 																		{parcourspro.dateDebut &&
-																			parcourspro.dateFin
+																		parcourspro.dateFin
 																			? `${parcourspro.dateDebut.substring(
-																				0,
-																				10
-																			)} jusqu'à ${parcourspro.dateFin.substring(
-																				0,
-																				10
-																			)}`
-																			: parcourspro.dateDebut
-																				? `${parcourspro.dateDebut.substring(
 																					0,
 																					10
-																				)} jusqu'à présent`
-																				: parcourspro.dateFin
-																					? `jusqu'à ${parcourspro.dateFin.substring(
-																						0,
-																						10
-																					)}`
-																					: "Dates non spécifiées"}
+																			  )} jusqu'à ${parcourspro.dateFin.substring(
+																					0,
+																					10
+																			  )}`
+																			: parcourspro.dateDebut
+																			? `${parcourspro.dateDebut.substring(
+																					0,
+																					10
+																			  )} jusqu'à présent`
+																			: parcourspro.dateFin
+																			? `jusqu'à ${parcourspro.dateFin.substring(
+																					0,
+																					10
+																			  )}`
+																			: "Dates non spécifiées"}
 																		<br />
 																		<strong>Description :</strong>{" "}
 																		{parcourspro.description}
 																	</p>
 																	{index !==
 																		cvData.parcoursProfessionnels.length -
-																		1 && <hr />}
+																			1 && <hr />}
 																</div>
 															)
 														)}
@@ -334,30 +343,30 @@ async function detecterFautes(texte) {
 																		<br />
 																		<strong>Période :</strong>{" "}
 																		{parcoursaca.dateDebut &&
-																			parcoursaca.dateFin
+																		parcoursaca.dateFin
 																			? `${parcoursaca.dateDebut.substring(
-																				0,
-																				10
-																			)} jusqu'à ${parcoursaca.dateFin.substring(
-																				0,
-																				10
-																			)}`
-																			: parcoursaca.dateDebut
-																				? `${parcoursaca.dateDebut.substring(
 																					0,
 																					10
-																				)} jusqu'à présent`
-																				: parcoursaca.dateFin
-																					? `jusqu'à ${parcoursaca.dateFin.substring(
-																						0,
-																						10
-																					)}`
-																					: "Dates non spécifiées"}
+																			  )} jusqu'à ${parcoursaca.dateFin.substring(
+																					0,
+																					10
+																			  )}`
+																			: parcoursaca.dateDebut
+																			? `${parcoursaca.dateDebut.substring(
+																					0,
+																					10
+																			  )} jusqu'à présent`
+																			: parcoursaca.dateFin
+																			? `jusqu'à ${parcoursaca.dateFin.substring(
+																					0,
+																					10
+																			  )}`
+																			: "Dates non spécifiées"}
 																	</p>
 																	{index !==
 																		cvData.parcoursAcademiques.length - 1 && (
-																			<hr />
-																		)}
+																		<hr />
+																	)}
 																</div>
 															)
 														)}
@@ -444,19 +453,29 @@ async function detecterFautes(texte) {
 						<div className="card animated">
 							<div className="card-headercorrect">Les Fautes Détectées :</div>
 							<div className="card-body-corection">
-								<ul className='corre'>
+								<ul className="corre">
 									{fautes.map((faute, index) => (
 										<li key={index}>
-											<strong>Attention Le mot <span className="text-danger">{faute.motFaux}</span> :</strong> <strong>{faute.message}</strong>
+											<strong>
+												Attention Le mot{" "}
+												<span className="text-danger">{faute.motFaux}</span> :
+											</strong>{" "}
+											<strong>{faute.message}</strong>
 											{selectedMot === faute.motFaux && (
-												<ol >
+												<ol>
 													{faute.suggestions.map((suggestion, index) => (
 														<li key={index}>{suggestion}</li>
 													))}
 												</ol>
 											)}
-											<span className=" masq text-danger" style={{ cursor: 'pointer', }} onClick={() => handleMotClick(faute.motFaux)}>
-												{selectedMot === faute.motFaux ? 'Masquer les suggestions' : 'Voir les suggestions'}
+											<span
+												className=" masq text-danger"
+												style={{ cursor: "pointer" }}
+												onClick={() => handleMotClick(faute.motFaux)}
+											>
+												{selectedMot === faute.motFaux
+													? "Masquer les suggestions"
+													: "Voir les suggestions"}
 											</span>
 										</li>
 									))}
@@ -466,8 +485,6 @@ async function detecterFautes(texte) {
 					</div>
 				</div>
 			</div>
-
-
 		</>
 	);
 }

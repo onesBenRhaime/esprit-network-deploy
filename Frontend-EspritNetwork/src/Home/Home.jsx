@@ -134,12 +134,12 @@ export function Home() {
 										<i className="ri-check-double-line" />
 										Bienvenue sur EspritNetwork, la plateforme dédiée au réseau
 										Esprit . Notre objectif est de connecter les étudiants de
-										l'université Esprit avec les entreprises et la communauté
-										Esprit au sein d'un réseau de communication dynamique. Que
-										vous représentiez une entreprise, un ancien élève ou un
-										enseignant, notre plateforme vous offre la possibilité de
-										publier des offres de stage, des opportunités demploi et
-										bien plus encore.
+										l&apos;université Esprit avec les entreprises et la
+										communauté Esprit au sein d&apos;un réseau de communication
+										dynamique. Que vous représentiez une entreprise, un ancien
+										élève ou un enseignant, notre plateforme vous offre la
+										possibilité de publier des offres de stage, des opportunités
+										demploi et bien plus encore.
 									</li>
 									<li className="mt-4">
 										<i className="ri-check-double-line " />
@@ -147,7 +147,7 @@ export function Home() {
 										la plateforme gratuitement. Cela simplifie considérablement
 										le processus de recrutement et de sélection des candidats.
 										De la création du CV à la passation des tests et à
-										l'acceptation finale, chaque étape est conçue pour être
+										l&apos;acceptation finale, chaque étape est conçue pour être
 										fluide et efficace, offrant une expérience optimale à toutes
 										les parties impliquées.
 									</li>
@@ -192,7 +192,7 @@ export function Home() {
 												data-bs-target="#accordion-list-1"
 											>
 												La publication des offres d emploi rapidement grâce à
-												l'utilisation de l'intelligence artificielle.
+												l&apos;utilisation de l&apos;intelligence artificielle.
 											</a>
 										</li>
 										<li>
