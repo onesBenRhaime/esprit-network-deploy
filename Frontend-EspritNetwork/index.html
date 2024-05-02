@@ -59,17 +59,7 @@
 	<body>
 		<div id="root"></div>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script>
-			$(document).ready(function () {
-				$.getScript("src/main.jsx")
-					.done(function (script, textStatus) {
-						console.log("Script loaded successfully");
-					})
-					.fail(function (jqxhr, settings, exception) {
-						console.error("Error loading script");
-					});
-			});
-		</script>
+		<script src="dist/bundle.js" type="module"></script>
 
 		<!-- Vendor JS Files -->
 		<script src="https://onesbenrhaime.github.io/assets/vendor/aos/aos.js"></script>
