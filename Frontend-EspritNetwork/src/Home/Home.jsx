@@ -177,10 +177,10 @@ export function Home() {
 					<div className="container-fluid" data-aos="fade-up">
 						<div className="row">
 							<div className="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-								<h2 style={{ color: "#cf0000" }}>Comment ça fonctionne ?</h2>
+								<h2 style={{ color: "#cf0000" }}>Comment Ça Fonctionne ?</h2>
 								<div className="content">
-									<h3 className="text-black">
-										<strong>Pour les entreprises</strong>
+									<h3 className="text-black mx-5">
+										<strong>Pour Les Entreprises</strong>
 									</h3>
 								</div>
 								<div className="accordion-list">
@@ -191,10 +191,8 @@ export function Home() {
 												className="collapse"
 												data-bs-target="#accordion-list-1"
 											>
-												<span>
-													<i className="ri-check-double-line" />
-												</span>
-												Non consectetur a erat nam at lectus urna duis?
+												La publication des offres d emploi rapidement grâce à
+												l'utilisation de l'intelligence artificielle.
 											</a>
 										</li>
 										<li>
@@ -203,10 +201,9 @@ export function Home() {
 												className="collapse"
 												data-bs-target="#accordion-list-1"
 											>
-												<span>
-													<i className="ri-check-double-line" />
-												</span>
-												Non consectetur a erat nam at lectus urna duis?
+												Simplifie la sélection des candidats en filtrant
+												automatiquement les candidatures selon les critères
+												prédéfinis.
 											</a>
 										</li>
 										<li>
@@ -215,10 +212,9 @@ export function Home() {
 												className="collapse"
 												data-bs-target="#accordion-list-1"
 											>
-												<span>
-													<i className="ri-check-double-line" />
-												</span>
-												Non consectetur a erat nam at lectus urna duis?
+												La création des tests et l’organisation des entretiens
+												avec les candidats, accélérant ainsi le processus de
+												recrutement et supprimant les contraintes logistiques.
 											</a>
 										</li>
 									</ul>
@@ -247,8 +243,8 @@ export function Home() {
 							</div>
 							<div className="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-1 order-lg-2">
 								<div className="content">
-									<h3 className="text-black">
-										<strong>Pour les entreprises</strong>
+									<h3 className="text-black mx-5">
+										<strong>Pour Les Candidats</strong>
 									</h3>
 								</div>
 								<div className="accordion-list">
@@ -259,34 +255,32 @@ export function Home() {
 												className="collapse"
 												data-bs-target="#accordion-list-1"
 											>
-												<span>
-													<i className="ri-check-double-line" />
-												</span>
-												Non consectetur a erat nam at lectus urna duis?
+												La possibilité de générer rapidement des CV
+												professionnels en ligne
 											</a>
 										</li>
+
 										<li>
 											<a
 												data-bs-toggle="collapse"
 												className="collapse"
 												data-bs-target="#accordion-list-1"
 											>
-												<span>
-													<i className="ri-check-double-line" />
-												</span>
-												Non consectetur a erat nam at lectus urna duis?
+												Facilite la recherche et la postulation à des offres
+												correspondant à leurs compétences et à leurs intérêts
+												grâce à une fonction de recherche avancée par
+												localisation et compétence
 											</a>
 										</li>
+
 										<li>
 											<a
 												data-bs-toggle="collapse"
 												className="collapse"
 												data-bs-target="#accordion-list-1"
 											>
-												<span>
-													<i className="ri-check-double-line" />
-												</span>
-												Non consectetur a erat nam at lectus urna duis?
+												La possibilité de participation à des tests en ligne
+												personnalisés directement sur notre plateforme{" "}
 											</a>
 										</li>
 									</ul>
@@ -295,8 +289,6 @@ export function Home() {
 						</div>
 					</div>
 				</section>
-				{/* End Why Us Section */}
-
 				{/* End Why Us Section */}
 				{/* ======= Team Section ======= */}
 				<section id="team" className="team section-bg">
@@ -489,7 +481,6 @@ export function Home() {
 				</section>
 				{/* End Team Section */}
 			</main>
-			{/* End #main */}
 		</>
 	);
 }
