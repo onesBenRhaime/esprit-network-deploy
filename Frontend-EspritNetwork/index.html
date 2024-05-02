@@ -58,8 +58,22 @@
 	</head>
 	<body>
 		<div id="root"></div>
-		<script type="module" src="/src/main.jsx"></script>
 
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$.ajax({
+					url: "main.jsx",
+					dataType: "script",
+					success: function () {
+						console.log("Script loaded successfully");
+					},
+					error: function () {
+						console.error("Error loading script");
+					},
+				});
+			});
+		</script>
 		<!-- Vendor JS Files -->
 		<script src="https://onesbenrhaime.github.io/assets/vendor/aos/aos.js"></script>
 		<script src="https://onesbenrhaime.github.io/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
