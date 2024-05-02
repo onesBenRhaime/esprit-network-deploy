@@ -121,20 +121,7 @@ export const Login = () => {
 							onChange={onChange}
 						/>
 						<input type="submit" className="bttn" value="Login" />
-						<Button
-							leftIcon={
-								<img
-									src="https://i.postimg.cc/fLNq3jdv/icons8-logo-google-240.png"
-									alt="Google Icon"
-									style={{ width: "24px", height: "24px" }}
-								/>
-							}
-							onClick={redirectToGoogleAuth}
-							bg="#F7F7F7"
-							className="btn btn-outline-secondary"
-						>
-							Connexion avec Google
-						</Button>
+						
 						<br />
 						<br />
 						<div style={{ display: "flex", justifyContent: "space-between" }}>
