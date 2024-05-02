@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
-import { QRCode } from "react-qr-code";
 
 const UserProfileEdit = () => {
 	const [showImageCard, setShowImageCard] = useState(false);
@@ -71,14 +70,6 @@ const UserProfileEdit = () => {
 						src="https://i.postimg.cc/htzBHD0W/handball-11.png"
 						alt="Profile"
 					/>
-					<div style={{ textAlign: "center", marginTop: "20px" }}>
-						<h2>QR Code</h2>
-						<QRCode
-							value={qrCodeData}
-							size={200}
-							style={{ width: "200px", height: "200px" }}
-						/>
-					</div>
 				</div>
 
 				<div className="login-content">

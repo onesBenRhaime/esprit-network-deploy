@@ -6,7 +6,6 @@ import Message from "../../LoadingError/Error";
 import Loading from "../../LoadingError/Loading";
 import "./LoginPage.css";
 import ReCAPTCHA from "react-google-recaptcha";
-import { Button } from "@chakra-ui/react";
 import { useSearchParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -39,9 +38,9 @@ export const Login = () => {
 		if (!email || !password) {
 			// Utilisation de SweetAlert2 pour afficher un message d'erreur si les champs sont vides
 			Swal.fire({
-				icon: 'error',
-				title: 'Oops...',
-				text: 'Veuillez remplir tous les champs.',
+				icon: "error",
+				title: "Oops...",
+				text: "Veuillez remplir tous les champs.",
 			});
 			return;
 		}
@@ -50,9 +49,9 @@ export const Login = () => {
 		} else {
 			// Utilisation de SweetAlert2 pour afficher un message d'erreur
 			Swal.fire({
-				icon: 'error',
-				title: 'Oops...',
-				text: 'Veuillez valider le captcha.',
+				icon: "error",
+				title: "Oops...",
+				text: "Veuillez valider le captcha.",
 			});
 		}
 	};
@@ -87,8 +86,7 @@ export const Login = () => {
 				</div>
 				<div className="login-content">
 					<form onSubmit={submitHandler}>
-						<h2 className="title">
-Bienvenue! </h2>
+						<h2 className="title">Bienvenue! </h2>
 						{error && <Message variant="alert-danger">{error}</Message>}
 						{loading && <Loading />}
 						<div className="input-div one">
@@ -135,12 +133,8 @@ Bienvenue! </h2>
 							bg="#F7F7F7"
 							className="btn btn-outline-secondary"
 						>
-Connexion avec Google
-
-
-
-
-</Button>
+							Connexion avec Google
+						</Button>
 						<br />
 						<br />
 						<div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -160,13 +154,8 @@ Connexion avec Google
 									background: "#F7F7F7",
 								}}
 							>
-Mot de passe oublié 
-
-
-
-
-
-</NavLink>
+								Mot de passe oublié
+							</NavLink>
 							<Link
 								to={redirect ? `/register?redirect=${redirect}` : "/register"}
 								style={{
