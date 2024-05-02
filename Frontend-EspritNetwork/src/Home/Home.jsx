@@ -62,7 +62,7 @@ export function Home() {
 								data-aos-delay={200}
 							>
 								<img
-									src="../../assets/img/hero.png"
+									src="https://onesbenrhaime.github.io/assets/img/hero.png"
 									className="img-fluid animated"
 									alt
 								/>
@@ -77,44 +77,44 @@ export function Home() {
 						<div className="row" data-aos="zoom-in">
 							<div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
 								<img
-									src="assets/img/clients/Print-Logo.png"
+									src="https://onesbenrhaime.github.io/assets/img/clients/Print-Logo.png"
 									className="img-fluid"
-									alt
+									alt=""
 								/>
 							</div>
 							<div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
 								<img
-									src="assets/img/clients/TT.png"
+									src="https://onesbenrhaime.github.io/assets/img/clients/TT.png"
 									className="img-fluid"
-									alt
+									alt=""
 								/>
 							</div>
 							<div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
 								<img
-									src="assets/img/clients/STIA.png"
+									src="https://onesbenrhaime.github.io/assets/img/clients/STIA.png"
 									className="img-fluid"
-									alt
+									alt=""
 								/>
 							</div>
 							<div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
 								<img
-									src="assets/img/clients/client-4.png"
+									src="https://onesbenrhaime.github.io/assets/img/clients/client-4.png"
 									className="img-fluid"
-									alt
+									alt=""
 								/>
 							</div>
 							<div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
 								<img
-									src="assets/img/clients/client-5.png"
+									src="https://onesbenrhaime.github.io/assets/img/clients/client-5.png"
 									className="img-fluid"
-									alt
+									alt=""
 								/>
 							</div>
 							<div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
 								<img
-									src="assets/img/clients/client-3.png"
+									src="https://onesbenrhaime.github.io/assets/img/clients/client-3.png"
 									className="img-fluid"
-									alt
+									alt=""
 								/>
 							</div>
 						</div>
@@ -222,7 +222,10 @@ export function Home() {
 							</div>
 							<div
 								className="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-								style={{ backgroundImage: 'url("assets/img/esprit-unv.jpeg")' }}
+								style={{
+									backgroundImage:
+										'url("https://onesbenrhaime.github.io/assets/img/esprit-unv.jpeg")',
+								}}
 								data-aos="zoom-in"
 								data-aos-delay={150}
 							>
@@ -235,7 +238,10 @@ export function Home() {
 						<div className="row about">
 							<div
 								className="col-lg-5 align-items-stretch order-2 order-lg-1 img"
-								style={{ backgroundImage: 'url("assets/img/esprit-unv.jpeg")' }}
+								style={{
+									backgroundImage:
+										'url("https://onesbenrhaime.github.io/assets/img/esprit-unv.jpeg")',
+								}}
 								data-aos="zoom-in"
 								data-aos-delay={150}
 							>
@@ -313,9 +319,9 @@ export function Home() {
 								<div className="member d-flex align-items-start">
 									<div className="pic">
 										<img
-											src="assets/img/team/Montassar.png"
+											src="https://onesbenrhaime.github.io/assets/img/team/Montassar.png"
 											className="img-fluid"
-											alt
+											alt=""
 										/>
 									</div>
 									<div className="member-info">
@@ -348,9 +354,9 @@ export function Home() {
 								<div className="member d-flex align-items-start">
 									<div className="pic">
 										<img
-											src="assets/img/team/Ahmed.png"
+											src="https://onesbenrhaime.github.io/assets/img/team/Ahmed.png"
 											className="img-fluid"
-											alt
+											alt=""
 										/>
 									</div>
 									<div className="member-info">
@@ -382,9 +388,9 @@ export function Home() {
 								<div className="member d-flex align-items-start">
 									<div className="pic">
 										<img
-											src="assets/img/team/Ones.png"
+											src="https://onesbenrhaime.github.io/assets/img/team/Ones.png"
 											className="img-fluid"
-											alt
+											alt=""
 										/>
 									</div>
 									<div className="member-info">
@@ -416,9 +422,9 @@ export function Home() {
 								<div className="member d-flex align-items-start">
 									<div className="pic">
 										<img
-											src="assets/img/team/Eya.png"
+											src="https://onesbenrhaime.github.io/assets/img/team/Eya.png"
 											className="img-fluid"
-											alt
+											alt=""
 										/>
 									</div>
 									<div className="member-info">
@@ -450,9 +456,9 @@ export function Home() {
 								<div className="member d-flex align-items-start">
 									<div className="pic">
 										<img
-											src="assets/img/team/Salah.png"
+											src="https://onesbenrhaime.github.io/assets/img/team/Salah.png"
 											className="img-fluid"
-											alt
+											alt=""
 										/>
 									</div>
 									<div className="member-info">
