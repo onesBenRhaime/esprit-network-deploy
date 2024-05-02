@@ -1,49 +1,48 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux"; // Adjust import statement
 import thunk from "redux-thunk";
-import composeWithDevTools from "redux-devtools-extension";
+import { composeWithDevTools } from "redux-devtools-extension"; // Import composeWithDevTools separately
 
 import {
-	userDetailsReducer,
-	userLoginReducer,
-	userRegisterReducer,
-	userUpdateProfileReducer,
+  userDetailsReducer,
+  userLoginReducer,
+  userRegisterReducer,
+  userUpdateProfileReducer,
 } from "./Reducers/userReducers";
 
 const reducer = combineReducers({
-	userLogin: userLoginReducer,
-	userRegister: userRegisterReducer,
-	userDetails: userDetailsReducer,
-	userUpdateProfile: userUpdateProfileReducer,
+  userLogin: userLoginReducer,
+  userRegister: userRegisterReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
 });
 
 const cartItemsFromLocalStorage = localStorage.getItem("cartItems")
-	? JSON.parse(localStorage.getItem("cartItems"))
-	: [];
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
 
-// login
 const userInfoFromLocalStorage = localStorage.getItem("userInfo")
-	? JSON.parse(localStorage.getItem("userInfo"))
-	: null;
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : null;
 
-// shippingAddress
 const shippingAddressFromLocalStorage = localStorage.getItem("shippingAddress")
-	? JSON.parse(localStorage.getItem("shippingAddress"))
-	: {};
+  ? JSON.parse(localStorage.getItem("shippingAddress"))
+  : {};
 
 const initialState = {
-	cart: {
-		cartItems: cartItemsFromLocalStorage,
-		shippingAddress: shippingAddressFromLocalStorage,
-	},
-	userLogin: { userInfo: userInfoFromLocalStorage },
+  cart: {
+    cartItems: cartItemsFromLocalStorage,
+    shippingAddress: shippingAddressFromLocalStorage,
+  },
+  userLogin: { userInfo: userInfoFromLocalStorage },
 };
 
 const middleware = [thunk];
 
+// Use composeWithDevTools as enhancer for createStore
 const store = createStore(
-	reducer,
-	initialState,
-	composeWithDevTools(applyMiddleware(...middleware))
+  reducer,
+  initialState,
+  composeWithDevTools(applyMiddleware(...middleware)) // Use composeWithDevTools
 );
 
 export default store;
