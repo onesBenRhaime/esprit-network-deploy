@@ -61,16 +61,13 @@
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script>
 			$(document).ready(function () {
-				$.ajax({
-					url: "src/main.jsx",
-					dataType: "script",
-					success: function () {
+				$.getScript("src/main.jsx")
+					.done(function (script, textStatus) {
 						console.log("Script loaded successfully");
-					},
-					error: function () {
+					})
+					.fail(function (jqxhr, settings, exception) {
 						console.error("Error loading script");
-					},
-				});
+					});
 			});
 		</script>
 
