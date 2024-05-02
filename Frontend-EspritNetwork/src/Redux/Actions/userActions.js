@@ -29,7 +29,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://localhost:3000/api/users/login`,
+      `https://esprit-network.onrender.com/api/users/login`,
       { email, password },
       config
     );
@@ -95,7 +95,7 @@ export const registerStudent = (name, email,adresseC, password,confirmPassword ,
     };
 
     const { data } = await axios.post(
-      `http://localhost:3000/api/users/register-student`,
+      `https://esprit-network.onrender.com/api/users/register-student`,
       { name, email,adresseC, password,confirmPassword  , pic},
       config
     );
